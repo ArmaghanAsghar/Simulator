@@ -26,7 +26,7 @@ void Publisher::publish(Simulator &sim) {
         ss_ptr->num_aircraft[my_type] * ss_ptr->passenger_count[my_type] * (ss_ptr->total_flight_time[my_type])
             * ss_ptr->cruise_speed[my_type];
 
-    ss << "\n\nType: " << my_type
+    ss << "\n\nType: " << getVerboseName(my_type)
        << "\nAverage flight time per flight: " << avg_flight_per_flight
        << "\nAverage distance traveled per flight: " << avg_distance_per_flight
        << "\nAverage time charging per charge session: " << avg_charge_per_session

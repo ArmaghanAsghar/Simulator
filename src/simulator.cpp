@@ -97,7 +97,6 @@ void Simulator::thread_job(std::shared_ptr<Aircraft> plane) {
     plane->isCharging();
     sema.release();
   }
-
 }
 
 /*!
@@ -120,7 +119,6 @@ void Simulator::stop_simulation() {
   }
   fly_cv.notify_all();
   charge_cv.notify_all();
-
 }
 
 /*!
@@ -131,6 +129,4 @@ void Simulator::stop_simulation() {
 int Simulator::gen_rand()  {
   //(TODO)(aasghar) this function is biased. Need a better random function.
   return rand()/((RAND_MAX + 1u)/5);
-
-
 }

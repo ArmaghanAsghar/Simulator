@@ -2,8 +2,8 @@
 // Created by Armaghan Wahid Asghar on 23/03/2023.
 //
 
-#ifndef EVTOL_INCLUDE_SIMULATOR_H_
-#define EVTOL_INCLUDE_SIMULATOR_H_
+#ifndef SIM_INCLUDE_SIMULATOR_H_
+#define SIM_INCLUDE_SIMULATOR_H_
 
 #include <thread>
 #include <vector>
@@ -15,7 +15,10 @@
 #include "c_semaphore.h"
 
 
-
+//(TODO)(aasghar) If we want to define additional simulations we can define here.
+/*!
+ * @brief defines a simulation on an aircraft types.
+ */
 class Simulator {
  public:
   std::shared_ptr<StatsStore> get_store();
@@ -24,10 +27,6 @@ class Simulator {
             int total_chargers,
             int simulator_hrs);
   void start();
-
- private:
-  std::random_device rd;  // Will be used to obtain a seed for the random number engine
-
 
  protected:
   int total_aircraft = 0;
@@ -48,4 +47,4 @@ class Simulator {
 
 };
 
-#endif //EVTOL_INCLUDE_SIMULATOR_H_
+#endif //SIM_INCLUDE_SIMULATOR_H_

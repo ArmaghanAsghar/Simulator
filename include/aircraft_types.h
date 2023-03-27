@@ -31,6 +31,26 @@ class E : public Aircraft {
 };
 
 /*!
+ * @brief: just used for pretty printing by the of aircraft type.
+ * @param ev_type An enum defining type of aircraft to construct.
+ * @return a string of type aircraft.
+ */
+static std::string getVerboseName(EV_TYPE ev_type) {
+  switch (ev_type) {
+    case EV_TYPE::TYPE_A:
+      return std::string("Aircraft A");
+    case EV_TYPE::TYPE_B:
+      return  std::string("Aircraft B");
+    case EV_TYPE::TYPE_C:
+      return std::string("Aircraft C");
+    case EV_TYPE::TYPE_D:
+      return  std::string("Aircraft D");
+    case EV_TYPE::TYPE_E:
+      return  std::string("Aircraft E");
+  }
+}
+
+/*!
  * @brief: factory method to return shared
  *  pointer of a Aircraft type.
  * @param ev_type An enum defining type of aircraft to construct.
