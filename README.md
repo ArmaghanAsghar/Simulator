@@ -2,6 +2,7 @@
 This is a small project to simulator the flight and charging of N number of aircrafts using multi-threading and thread synchronization strategies. 
 
 # Architecture
+![Simulator UML-3](https://user-images.githubusercontent.com/54956731/232108518-6100cc33-10ac-4b74-bc24-f40526dad104.jpeg)
 
 # Working
 * This simulator takes as input "total number of aircrafts", "total number of charging stations" and "hours of simulation". 
