@@ -1,5 +1,9 @@
-# Simulator
+# Breif
 This is a small project to simulator the flight and charging of N number of aircrafts using multi-threading and thread synchronization strategies. 
+
+# Code Flow
+![Blank diagram](https://user-images.githubusercontent.com/54956731/232123872-bf7941c4-4a32-4703-ac52-bfde88ab3d35.jpeg)
+
 
 # Architecture
 ![Simulator UML-3](https://user-images.githubusercontent.com/54956731/232108518-6100cc33-10ac-4b74-bc24-f40526dad104.jpeg)
