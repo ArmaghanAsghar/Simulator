@@ -1,6 +1,8 @@
 # Simulator
 This is a small project to simulator the flight and charging of N number of aircrafts using multi-threading and thread synchronization strategies. 
 
+# Architecture
+
 # Working
 * This simulator takes as input "total number of aircrafts", "total number of charging stations" and "hours of simulation". 
 * The simulation is scaled with reference to 1 hr being equal to 1 second. So, a 3 hr simulation would be 3 seconds long. 
