@@ -1,5 +1,5 @@
 # Breif
-This is a small project to simulator the flight and charging of N number of aircrafts using multi-threading and thread synchronization strategies. 
+A project to simulate the flight and charging of N number of aircrafts using multi-threading and thread-synchronization techniques. Publish thread statistics as result of simulation. 
 
 # Code Flow
 ![Blank diagram](https://user-images.githubusercontent.com/54956731/232123872-bf7941c4-4a32-4703-ac52-bfde88ab3d35.jpeg)
@@ -12,9 +12,8 @@ This is a small project to simulator the flight and charging of N number of airc
 * This simulator takes as input "total number of aircrafts", "total number of charging stations" and "hours of simulation". 
 * The simulation is scaled with reference to 1 hr being equal to 1 second. So, a 3 hr simulation would be 3 seconds long. 
 * The simulation consists of a main thread and multiple childern threads. Each child thread is associated with a aircraft object to perform operations of flying and charging. 
-* The flow to charging stations is controlled using a counting semaphore. I have designed a custom semaphore as the C++20 semaphore did not allow dynamic assignment. 
-* The simulation ends when the main thread times out i.e. when "hours of simulation" expire. At this point, the main thread notifies all childern thread 
-to interrupt their operation, which in return stops populating the stats. (Some assumptions are made in this regard). 
+* The flow to charging stations is controlled using a counting semaphore. I have designed a custom semaphore as the C++20 semaphore did not allow copy or move-assignment. Could not set the value dynamically.  
+* The simulation ends when the main thread times out i.e. when "hours of simulation" expire. At this point, the main thread notifies all childern thread to wrap-up their execution, which in return stops populating the stats. (Some assumptions are made in this regard). 
 
 # Logging
 For the purpose of verifying the simulation, I have used thread-safe logging on console which shows all the events of the simulation as they happen for every aircraft. The numbers [x] is type of aircraft.<br/>
