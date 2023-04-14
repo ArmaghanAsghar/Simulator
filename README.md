@@ -1,4 +1,4 @@
-# Breif
+# Summary
 A project to simulate the flight and charging of N number of aircrafts using multi-threading and thread-synchronization techniques. Publish thread statistics as result of simulation. 
 
 # Code Flow
